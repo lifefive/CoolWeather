@@ -137,6 +137,7 @@ public class WeatherActivity extends AppCompatActivity {
                                     .getDefaultSharedPreferences(WeatherActivity.this).edit();
                             editor.putString("weather",responseText);
                             editor.apply();
+                            Toast.makeText(WeatherActivity.this, "获取天气信息", Toast.LENGTH_SHORT).show();
                             showWeatherInfo(weather); // 显示内容
                         }else{
                             Toast.makeText(WeatherActivity.this, "获取天气信息失败", Toast.LENGTH_SHORT).show();
